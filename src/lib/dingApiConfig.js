@@ -7,7 +7,7 @@ const dingApiConfig = {
   'biz.util.open': true,
   'biz.contact.choose': true,
   'biz.contact.chooseMobileContacts': false,
-  'biz.user.get': true,
+  'biz.user.get': false,
   'biz.util.uploadImage': false,
   'biz.ding.post': false,
   'biz.telephone.call': false,

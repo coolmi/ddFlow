@@ -1,26 +1,41 @@
 <template>
   <div>
-    <cell v-model="name"></cell>
+    {{userInfo}}
   </div>
 </template>
 
 <script>
-  import {Cell} from 'vux'
-
+  import dingUser from '@/lib/dingUser';
+  import {mapGetters} from 'vuex'
+  import api from 'api'
+  import router from '../router'
   export default {
-    components: {
-      Cell
-    },
     data() {
       return {
-        name: '首页展示'
+        userInfo: ''
       }
     },
+    computed: {
+      ...mapGetters({
+        path: 'getddConfigPath'
+      })
+    },
     created() {
+      this.getddUserID();
+    },
+    methods: {
+      getddUserID() {
+        dingUser.getRequestAuthCode(this.path).then((data) => {
+          api.getLogin(data, function (res) {
+            if (res.data.code) {
+              router.push({path: '/befHome'})
+            }
+          });
+        })
+      }
     }
   }
 </script>
 
-<style lang="less" type="text/less">
-
+<style scoped lang="less">
 </style>

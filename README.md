@@ -28,15 +28,6 @@ npm run build --report
 4. baseConfig.js 网络请求地址
 5. whole.js 框架信息提示
 
-# flow 流程所用js
-1. flowDataUtils.js 流程数据处理
-2. flowButtonNames.js 流程按钮名称设定
-3. flowButtonUtils.js 流程按钮显示
-4. flowShowMsg.js 流程信息提示
-5. flowFilesEventUtils.js 流程附件事件
-6. flowGetListUtils.js 组装获取列表所需的参数
-7. flowResponseUtils 关于获取流程数据后处理错误的一些方式
-
 # lib 第三方js 主要为钉钉所用的
 1. ding.js 钉钉jsAPI封装
 2. dateFormatter.js 日期处理

@@ -3,10 +3,6 @@
  */
 import store from '../store/index'
 
-export function showMore(flag) {
-  store.dispatch('showMore', flag);
-}
-
 export function showTop(str) {
   store.dispatch('showTopMessage', true);
   store.dispatch('topMessage', str);
@@ -27,7 +23,6 @@ export function leave() {
 }
 
 export default {
-  showMore,
   showTop,
   busy,
   leave
