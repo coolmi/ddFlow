@@ -15,6 +15,14 @@ const router = new Router({
   routes: [
     {
       path: '/',
+      component: require('@/views/material'),
+      meta: {
+        title: '自助首页',
+        ddConfig: true
+      }
+    },
+    {
+      path: '/e',
       component: require('@/views/userinfo'),
       meta: {
         title: '自助首页',
@@ -122,13 +130,6 @@ const router = new Router({
             })
           }
         }
-      }
-    },
-    {
-      path: '/hrinfo',
-      component: require('@/views/hrinfo'),
-      meta: {
-        title: '详情页'
       }
     }
   ]
