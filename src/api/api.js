@@ -66,7 +66,7 @@ export default {
    */
   getJsApiInfos: function (params, cb) {
     // let dingtalkCode = ding.parseParam(window.location.href, 'dingtalk_code') || ding.getLocation(AUTH_DINGTALKCODE)
-    axios.get('/api/ddtalk/miandeng/h5config?purl=' + params)
+    axios.get('/api/ddtalk/miandeng/h5config?purl=' + params + '&ddcode=' + 'TAX')
       .then((res) => {
         cb(res);
       }).catch((error) => {
